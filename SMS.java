@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 class SMS {
     static SMS[][] database = new SMS[120][10];
-    static int it, mech, textile, civil, cse, entc, prod, elec, instru, chem;
-    static int itr, mechr, texr, civilr, cser, entcr, prodr, elecr, intrur, chemr;
+    static int mech,it, textile, civil, cse, entc, prod, elec, instru, chem;
+    static int cse_I, entc_I, prod_I, elec_I, intru_I, chem_I,it_I,  mech_I, tex_I, civil_I;
     static Scanner scanner = new Scanner(System.in);
 
     String[] info;
@@ -27,52 +27,52 @@ class SMS {
                 case "CSE":
                     this.reg_no = "2023BCS" + String.format("%03d", ++cser);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[cser - 1][0] = this;
+                    database[cse_I - 1][0] = this;
                     break;
                 case "IT":
                     this.reg_no = "2023BIT" + String.format("%03d", ++itr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[itr - 1][1] = this;
+                    database[it_I - 1][1] = this;
                     break;
                 case "MECH":
                     this.reg_no = "2023BME" + String.format("%03d", ++mechr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[mechr - 1][2] = this;
+                    database[mech_I - 1][2] = this;
                     break;
                 case "CHEM":
                     this.reg_no = "2023BCH" + String.format("%03d", ++chemr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[chemr - 1][3] = this;
+                    database[chem_I - 1][3] = this;
                     break;
                 case "CIVIL":
                     this.reg_no = "2023BCE" + String.format("%03d", ++civilr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[civilr - 1][4] = this;
+                    database[civil_I - 1][4] = this;
                     break;
                 case "TEXTILE":
                     this.reg_no = "2023BTT" + String.format("%03d", ++texr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[texr - 1][5] = this;
+                    database[tex_I - 1][5] = this;
                     break;
                 case "ELEC":
                     this.reg_no = "2023BEL" + String.format("%03d", ++elecr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[elecr - 1][6] = this;
+                    database[elec_I - 1][6] = this;
                     break;
                 case "INSTRU":
                     this.reg_no = "2023BIN" + String.format("%03d", ++intrur);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[intrur - 1][7] = this;
+                    database[intru_I - 1][7] = this;
                     break;
                 case "ENTC":
                     this.reg_no = "2023BEC" + String.format("%03d", ++entcr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[entcr - 1][8] = this;
+                    database[entc_I - 1][8] = this;
                     break;
                 case "PROD":
                     this.reg_no = "2023BPE" + String.format("%03d", ++prodr);
                     this.email = this.reg_no.toLowerCase() + "@sggs.ac.in";
-                    database[prodr - 1][9] = this;
+                    database[prod_I - 1][9] = this;
                     break;
                 default:
                     System.out.println("Provide valid branch input for Regular year");
